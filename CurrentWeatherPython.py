@@ -9,7 +9,7 @@ from pprint import pprint
 
 def bycity():    
     city=input("Enter name of the city:")
-    url="https://samples.openweathermap.org/data/2.5/weather?q={}&appid=b6907d289e10d714a6e88b30761fae22".format(city)
+    url="https://openweathermap.org/data/2.5/weather?q={}&appid=b6907d289e10d714a6e88b30761fae22".format(city)
     res=requests.get(url)
     data=res.json()
     display_data(data)
@@ -17,7 +17,7 @@ def bycity():
 
 def byzip():
     zipcode=input("Enter zip code:")
-    url="https://samples.openweathermap.org/data/2.5/weather?zip={},us&appid=b6907d289e10d714a6e88b30761fae22".format(zipcode)
+    url="https://openweathermap.org/data/2.5/weather?zip={},us&appid=b6907d289e10d714a6e88b30761fae22".format(zipcode)
     res=requests.get(url)
     data=res.json()
     display_data(data)
